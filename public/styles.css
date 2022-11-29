@@ -1,0 +1,653 @@
+/* {
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    background-color: rgb(42, 41, 41);
+    color: rgb(180, 179, 179);
+    background: -webkit-linear-gradient(0deg, #b92b27, #1565C0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(42, 41, 41);
+}
+
+.navBar{
+    
+    background-color: black;
+    color: rgb(180, 179, 179);
+    list-style: none;
+    overflow: hidden;
+}
+
+.navBar li{
+    float: left;
+    padding: 20px;
+    color: rgb(180, 179, 179);
+}
+
+.navBar #account{
+    float: right;
+    
+}
+
+.navBar a{
+    color: rgb(180, 179, 179);
+    text-decoration: none;
+}
+
+.navBar .nav:hover{
+    /* background-color: rgb(118, 15, 15); */
+    background-image: linear-gradient(to bottom right, #b92b27 0%, #1565C0 100%);
+}
+
+.homeBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.homeBody .movieShow{
+    /* height: 300px; */
+    flex: 1;
+    margin: 10px;
+    padding: 16px;
+    border: 2px solid black;
+    color: rgb(180, 179, 179);
+    height: auto;
+}
+
+.homeBody .recList{
+    /* height: 300px; */
+    height: auto;
+    flex: 1;
+    margin: 10px;
+    padding: 16px;
+    border: 2px solid black;
+    /* overflow: scroll; */
+}
+
+.recListRow{
+    border: 2px solid black;
+    margin-bottom: 10px;
+    list-style: none;
+    overflow: hidden;
+    background-color: black;
+    color: rgb(180, 179, 179);
+}
+
+.recListRow:hover{
+    /* background-color: rgb(118, 15, 15); */
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    border-color: rgb(42, 41, 41);
+}
+
+.recListRow li{
+    float: left;
+    padding: 20px;
+    width: 20px;
+}
+
+.recListRow #movieName{
+    height: 100%;
+    width: 280px;
+    word-wrap: break-word;
+}
+
+.recList #director{
+    width: 200px;
+    word-wrap: break-word;
+}
+
+.movieCard{
+    border: 2px solid black;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.movieCard img{
+    height: 373px;
+    width: 667px;
+    margin-bottom: 20px;
+}
+
+.movieCard h1{
+    font-size: 50px;
+}
+
+.movieCard p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.movieCard button{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(180, 179, 179);
+    border-style: none; 
+    width: 100%;  
+}
+
+.movieCard button:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    color: rgb(180, 179, 179);
+}
+
+.searchField{
+    overflow: hidden;
+    list-style: none;
+    background-color: rgb(42, 41, 41);
+    border-bottom: 2px solid black;
+}
+
+.searchField li{
+    float: right;
+    padding: 20px;
+    color: rgb(180, 179, 179);
+    height: 100%;
+}
+
+.searchField .searchQuery{
+    float: left;
+    padding: 10px;
+}
+
+.searchField .searchQueryType:hover{
+    background-image: linear-gradient(to bottom right, #b92b27, #1565C0);
+}
+
+.searchField button{
+    padding: 10px;
+}
+
+.searchField input{
+    padding: 10px;
+}
+
+.searchResult{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.searchResult .movieCard{
+    width: 455px;
+    margin: 1px 1px;
+    color: rgb(180, 179, 179);
+}
+
+.searchResult .movieCard h1{
+    font-size: 35px;
+}
+
+.searchResult .movieCard img{
+    height: 40%;
+    width: 98%;
+}
+
+.moviePage .moviePageContentWrapper{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.movieCardFull{
+    color: rgb(180, 179, 179);
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.movieCardFull .movieCardFullDesc{
+    overflow: hidden;
+}
+
+.movieCardFull h1{
+    font-size: 50px;
+}
+
+.movieCardFullDesc #rating{
+    float: left;
+}
+
+.movieCardFullDesc #age{
+    float: right;
+    padding: 0 5px;
+}
+
+.movieCardFull img{
+    height: 450px;
+    width: 99.8%;
+    margin-bottom: 30px;
+}
+
+.movieCardFull hr{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.movieCardFull .ticketButton{
+    margin-top: 10px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(180, 179, 179);
+    border-style: none; 
+    width: 100%;  
+}
+
+.movieCardFull .ticketButton:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    color: rgb(180, 179, 179);
+}
+
+.moviePageContentWrapper .movieReviews{
+    width: 48%;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    color: rgb(180, 179, 179);
+    
+}
+
+.movieReviews .writeReview{
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: linear-gradient(90deg, #b92b27 , #1565C0);
+    margin-bottom: 10px;
+}
+
+.writeReview  textarea{
+    resize: none;
+    /* background-color: black; */
+    background-color: rgb(42, 41, 41);
+    padding: 10px;
+    color: rgb(180, 179, 179);
+    border: 1px solid black;
+    font-size: 15px;
+    margin: 3px;
+    box-sizing: border-box;
+}
+
+.movieReviews .writeReview  textarea:focus{
+    outline: none;
+}
+
+.writeReview button{
+    margin-top: 10px;
+    padding: 10px 0;
+    background-color: rgb(180, 179, 179);
+    border: none;
+    font-size: 20px;
+    
+}
+
+.writeReview button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(180, 179, 179);
+}
+
+#reviewHR{
+    margin: 10px 0;
+}
+
+.movieReviews .readReviews{
+    margin-top: 10px;
+    overflow: scroll;
+    height: 715px;
+}
+
+.readReviews::-webkit-scrollbar {
+    display: none;
+}
+
+.movieReviews .singleReview{
+    border: solid 2px black;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.movieReviews .mySingleReview{
+    background-image: linear-gradient(90deg, #b92b27 , #1565C0);
+    box-sizing: border-box;
+    padding: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.mySingleReview p{
+    background-color: rgb(42, 41, 41);
+    padding: 10px;
+}
+
+.mySingleReview button{
+    padding-top: 5px;
+    height: 30px;
+    width: 20px;
+    float: right;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0px none;
+    color: rgb(180, 179, 179);
+}
+
+.titleBar{
+    background-color: black;
+    color: rgb(180, 179, 179);
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 16px;
+    text-align: center;
+    cursor: default;
+}
+
+.loginPageWrapper, .registerPageWrapper{
+    height: 90vh;
+    width: 100%;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+}
+
+.registerPageWrapper{
+    height: 120vh;
+}
+
+.loginForm, .registerForm{
+    height: 475px;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 10px 20px 10px rgb(23, 21, 21);
+}
+
+.registerForm{
+    height: 700px;
+    margin-bottom: 40px;
+}
+
+.loginForm h1, .registerForm h1, .accountOptions h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 70px;
+    color: rgb(180, 179, 179);
+    
+}
+
+.loginForm input, .registerForm input{
+    display: block;
+    margin: 30px auto;
+    height: 45px;
+    width: 85%;
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: rgb(38, 36, 36);
+    border-style: solid;
+    border-color: rgb(180, 179, 179);
+    color: rgb(180, 179, 179);
+    padding: 5px;
+    text-align: center;
+}
+
+.loginForm button, .registerForm button{
+    height: 45px;
+    width: 40%;
+    background-color: rgb(38, 36, 36);
+    border-style: solid;
+    border-color: rgb(180, 179, 179);
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(180, 179, 179);
+}
+
+.loginForm button:hover, .registerForm button:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    color: white;
+}
+
+.loginForm .newUserQuery, .registerForm .newUserQuery{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    font-size: 20px;
+    color: rgb(180, 179, 179);
+}
+
+.newUserQuery a{
+    font-weight: 500;
+  background: -webkit-linear-gradient(0deg, #b92b27, #1565C0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.accountOptions p{
+    margin: 30px 10px;
+    height: 30px;
+    font-size: 25px;
+    padding: 5px;
+    border-style: solid;
+    border-color: rgb(180, 179, 179);
+    color: rgb(180, 179, 179);
+}
+
+.accountOptions p:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+    cursor: pointer;
+}
+
+.accountOptions a{
+        color: rgb(180, 179, 179);
+        text-decoration: none;
+}
+
+.dateSelect{
+    list-style: none;
+    overflow: hidden;
+    border-bottom: solid 2px black;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.dateSelect li{
+    padding: 20px;
+    font-size: 20px;
+    color: rgb(180, 179, 179);
+    flex: 25%;
+    text-align: center;
+    /* border-bottom: solid 2px black; */
+    border-right: solid 2px black;
+}
+
+.dateSelect li:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+}
+
+.bookTicketsPage h1{
+    text-align: center;
+    color: rgb(180, 179, 179);
+    padding: 10px;
+    border-bottom: solid 2px black;
+}
+
+.ticketSelect{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 83.5vh;
+}
+
+.ticketSelect .timeSelect{
+    flex: 20%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ticketSelect .hallSelect{
+    flex: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+}
+
+.ticketSelect .seatArea{
+    flex: 60%;
+    /* background-color: blue; */
+    border: solid 2px black;
+    border-top: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeSelect .timeSlot{
+    flex: 12.5%;
+    border-bottom: solid 2px black;
+    border-right: solid 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(180, 179, 179);
+    text-align: center;
+}
+
+.hallSelect .hallOptions{
+    flex: 25%;
+    border-bottom: solid 2px black;
+    font-size: 25px;
+    color: rgb(180, 179, 179);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeSlot:hover, .hallOptions:hover{
+    background-image: linear-gradient(90deg, #b92b27, #1565C0);
+}
+
+.seatArea .seatSelectArea{
+    display: flex;
+    flex-direction: column;
+    flex: 95%;
+    margin-top: 20px;
+}
+
+.seatSelectArea .seatMatRow{
+    box-sizing: border-box;
+    flex: 15%;
+    border-bottom: solid 2px black;
+    display: flex;
+    flex-direction: row;
+}
+
+.seatMatRow .seatMatSeat{
+    flex: 1;
+    margin : 10px;
+}
+
+.preSelectedSeat{
+    background-color: #b92b27;
+}
+
+.unSelectedSeat{
+    background-color: rgb(180, 179, 179);
+}
+
+.unSelectedSeat:hover{
+    background-image: linear-gradient(to bottom right, #b92b27, #1565C0);
+}
+
+.selectedSeat{
+    background-color: #1565C0;
+}
+
+.seatSelectArea .paymentArea{
+    display: flex;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.paymentArea .paymentAreaItem{
+    flex: 1;
+}
+
+.paymentArea p{
+    text-align: center;
+    color: rgb(180, 179, 179);
+}
+
+.paymentArea button{
+    padding: auto;
+}
+
+.accountPageWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 0px 20px;
+}
+
+.accountPageItem{
+    /* height: 475px;
+    width: 350px; */
+    /* margin: auto; */
+    
+    width: 400px;
+    text-align: center;
+    padding: 40px 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 10px 20px 10px rgb(23, 21, 21);
+    margin: 0px 40px;
+}
+
+.ticketsDisplay, .eachTicketsDisplay{
+    width: 500px;
+    background-image: linear-gradient(to bottom right, #b92b27, #1565C0);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    border: solid 2px black;
+}
+
+.ticketsDisplay::-webkit-scrollbar, .eachTicketsDisplay::-webkit-scrollbar{
+    display: none;
+}
+
+.ticketDisplayItem, .eachTicketDisplayItem{
+    margin: 10px;
+    height: auto;
+    border: solid 2px black;
+    padding: 10px;
+    background-color: rgb(42, 41, 41);
+    color: rgb(180, 179, 179);
+}
